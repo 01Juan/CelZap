@@ -27,10 +27,10 @@ function refreshPage() {
     var cidade = document.querySelector(".cidade");
     var sequencia = document.querySelector(".sequencia");
     var quantidade = document.querySelector(".quantidade");
-    var texto = document.querySelector(".texto");
+    var mensagem = document.querySelector(".mensagem");
     var vPais = pais.value;
     var vCidade = cidade.value;
-    var vTexto = texto.value;
+    var vMsg = mensagem.value;
     var vQuantidade = parseFloat(quantidade.value);
     var vSequencia = parseFloat(sequencia.value);
     var vSequencia2 = parseFloat(sequencia.value) + vQuantidade;
@@ -40,7 +40,7 @@ function refreshPage() {
         numero.setAttribute("class", "numero");
         numero.setAttribute("id", "limpar");
         var href = document.createElement("a");
-        href.setAttribute("href", "https://api.whatsapp.com/send?phone=" + vPais + vCidade + i + "&text=" + vTexto);
+        href.setAttribute("href", "https://api.whatsapp.com/send?phone=" + vPais + vCidade + i + "&text=" + vMsg);
         href.setAttribute("id", i);
         href.innerHTML = i;
         document.getElementsByTagName("body")[0].appendChild(numero);
