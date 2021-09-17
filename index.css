@@ -169,3 +169,6 @@ button {
   margin-right: auto;
 }
 
+.quantidade {
+  display: none;
+}
